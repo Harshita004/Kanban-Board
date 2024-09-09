@@ -1,0 +1,211 @@
+/* Basic flexbox layout */
+.flex {
+    display: flex;
+}
+
+/* Gap between columns */
+.gap-16 {
+    gap: 16px;
+}
+
+/* Section Styles */
+.w-64 {
+    width: 256px;
+    min-height: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.task-list {
+    margin-top: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Section specific colors */
+.todo-section {
+    background-color: #f5f5f5;
+    border-left: 5px solid #fbbf24; /* Yellow border */
+}
+
+.inprogress-section {
+    background-color: #e0f7fa;
+    border-left: 5px solid #0288d1; /* Blue border */
+}
+
+.completed-section {
+    background-color: #e6f4ea;
+    border-left: 5px solid #43a047; /* Green border */
+}
+
+/* Header Styles */
+.bg-slate-500 {
+    background-color: #64748b;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Task Item Styles */
+.task-item {
+    transition: all 0.3s ease;
+}
+
+.task-item:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+}
+
+/* Task priority colors */
+.text-red-500 {
+    color: #f44336;
+}
+
+.text-yellow-500 {
+    color: #ffeb3b;
+}
+
+.text-green-500 {
+    color: #4caf50;
+}
+
+/* Delete button */
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Status Dropdown */
+.status-dropdown {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Scrollbar for long task lists */
+.task-list {
+    overflow-y: auto;
+}
+
+.task-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.task-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.status-dropdown {
+    appearance: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: 16px;
+    cursor: pointer;
+    width: 24px; /* Compress width to symbol size */
+    height: 24px;
+    /* Hide dropdown options until the arrow is clicked */
+    opacity: 0; /* Hide the actual dropdown */
+    position: absolute; /* Position absolute so it doesn't take space */
+    top: 0;
+    right: 0;
+}
+
+.status-dropdown-symbol {
+    width: 16px;
+    height: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.relative {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+/* Rotate arrow on dropdown open */
+.status-dropdown:focus + .status-dropdown-symbol {
+    transform: rotate(180deg);
+}
+
+.status-dropdown:focus {
+    opacity: 1; /* Show the dropdown options when focused */
+}
+
+/* Align SVG icon */
+.relative svg {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent clicking on the SVG */
+}
+
+/* General Section Header Styles */
+
+/* Specific Styles for each Section */
+
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-dropdown {
+    appearance: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 8px; /* Add spacing between the select and the SVG */
+}
+
+.status-dropdown-symbol {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.relative {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add gap between the dropdown and the delete button */
+}
+
+.delete-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    background-color: #e53e3e;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c53030; /* Darken the red color on hover */
+}
+
